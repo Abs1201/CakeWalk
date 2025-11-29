@@ -21,9 +21,9 @@ public class CakeWalk : ModuleRules
 			"Slate"
 		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] { });
+        PrivateDependencyModuleNames.AddRange(new string[] { "GameplayTags", "GameplayTasks", "NavigationSystem" /*, "AIModule" */, "GameplayAbilities", "Niagara"});
 
-		PublicIncludePaths.AddRange(new string[] {
+        PublicIncludePaths.AddRange(new string[] {
 			"CakeWalk",
 			"CakeWalk/Variant_Platforming",
 			"CakeWalk/Variant_Platforming/Animation",
