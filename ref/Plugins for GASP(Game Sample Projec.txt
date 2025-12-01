@@ -1,0 +1,8 @@
+<Plugins for GASP(GameAnimationSample)>
+motion trajectory
+pose search
+motion warping
+animation warping
+chooser
+animation locomotion library
+deformer Graph
