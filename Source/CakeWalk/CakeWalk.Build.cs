@@ -14,31 +14,33 @@ public class CakeWalk : ModuleRules
 			"Engine",
 			"InputCore",
 			"EnhancedInput",
-			"AIModule",
-			"StateTreeModule",
-			"GameplayStateTreeModule",
-			"UMG",
-			"Slate"
+            "GameplayAbilities",
+			"Niagara"
+			//"AIModule",
+			//"StateTreeModule",
+			//"GameplayStateTreeModule",
+			//"UMG",
+			//"Slate"
 		});
 
-        PrivateDependencyModuleNames.AddRange(new string[] { "GameplayTags", "GameplayTasks", "NavigationSystem" /*, "AIModule" */, "GameplayAbilities", "Niagara"});
+        PrivateDependencyModuleNames.AddRange(new string[] { "GameplayTags", "GameplayTasks", "NavigationSystem" , "AIModule"});
 
-        PublicIncludePaths.AddRange(new string[] {
-			"CakeWalk",
-			"CakeWalk/Variant_Platforming",
-			"CakeWalk/Variant_Platforming/Animation",
-			"CakeWalk/Variant_Combat",
-			"CakeWalk/Variant_Combat/AI",
-			"CakeWalk/Variant_Combat/Animation",
-			"CakeWalk/Variant_Combat/Gameplay",
-			"CakeWalk/Variant_Combat/Interfaces",
-			"CakeWalk/Variant_Combat/UI",
-			"CakeWalk/Variant_SideScrolling",
-			"CakeWalk/Variant_SideScrolling/AI",
-			"CakeWalk/Variant_SideScrolling/Gameplay",
-			"CakeWalk/Variant_SideScrolling/Interfaces",
-			"CakeWalk/Variant_SideScrolling/UI"
-		});
+  //      PublicIncludePaths.AddRange(new string[] {
+		//	"CakeWalk",
+		//	"CakeWalk/Variant_Platforming",
+		//	"CakeWalk/Variant_Platforming/Animation",
+		//	"CakeWalk/Variant_Combat",
+		//	"CakeWalk/Variant_Combat/AI",
+		//	"CakeWalk/Variant_Combat/Animation",
+		//	"CakeWalk/Variant_Combat/Gameplay",
+		//	"CakeWalk/Variant_Combat/Interfaces",
+		//	"CakeWalk/Variant_Combat/UI",
+		//	"CakeWalk/Variant_SideScrolling",
+		//	"CakeWalk/Variant_SideScrolling/AI",
+		//	"CakeWalk/Variant_SideScrolling/Gameplay",
+		//	"CakeWalk/Variant_SideScrolling/Interfaces",
+		//	"CakeWalk/Variant_SideScrolling/UI"
+		//});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

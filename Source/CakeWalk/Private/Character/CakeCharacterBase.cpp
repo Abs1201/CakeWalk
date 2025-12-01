@@ -2,33 +2,41 @@
 
 
 #include "Character/CakeCharacterBase.h"
+#include "AbilitySystemComponent.h"
 
-// Sets default values
+
 ACakeCharacterBase::ACakeCharacterBase()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-}
-
-// Called when the game starts or when spawned
-void ACakeCharacterBase::BeginPlay()
-{
-	Super::BeginPlay();
-	
-}
-
-// Called every frame
-void ACakeCharacterBase::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 
 }
 
-// Called to bind functionality to input
+//void ACakeCharacterBase::BeginPlay()
+//{
+//	Super::BeginPlay();
+//	
+//}
+//
+//void ACakeCharacterBase::Tick(float DeltaTime)
+//{
+//	Super::Tick(DeltaTime);
+//
+//}
+
 void ACakeCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+UAbilitySystemComponent* ACakeCharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
+UAttributeSet* ACakeCharacterBase::GetAttributeSet() const
+{
+	return AttributeSet;
 }
 
