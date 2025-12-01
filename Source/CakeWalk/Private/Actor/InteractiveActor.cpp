@@ -38,6 +38,11 @@ void AInteractiveActor::BeginPlay()
 	InteractiveSphere->OnComponentBeginOverlap.AddDynamic(this, &AInteractiveActor::OnSphereOverlap);
 	InteractiveSphere->OnComponentEndOverlap.AddDynamic(this, &AInteractiveActor::OnSphereEndOverlap);
 
+	if (IsValid(InteractiveWidget))
+	{
+		InteractiveWidget->SetVisibility(false);
+	}
+
 }
 
 
@@ -56,6 +61,10 @@ void AInteractiveActor::OnSphereOverlap(UPrimitiveComponent* OverlappedComp, AAc
 	{
 		EnableCustomDepth(true);
 
+		if (IsValid(InteractiveWidget))
+		{
+			InteractiveWidget->SetVisibility(true);
+		}
 	}
 
 }
@@ -63,5 +72,9 @@ void AInteractiveActor::OnSphereOverlap(UPrimitiveComponent* OverlappedComp, AAc
 void AInteractiveActor::OnSphereEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	EnableCustomDepth(false);
+	if (IsValid(InteractiveWidget))
+	{
+		InteractiveWidget->SetVisibility(false);
+	}
 }
 
