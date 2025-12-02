@@ -12,17 +12,17 @@ ACakeCharacterBase::ACakeCharacterBase()
 
 }
 
-//void ACakeCharacterBase::BeginPlay()
-//{
-//	Super::BeginPlay();
-//	
-//}
-//
-//void ACakeCharacterBase::Tick(float DeltaTime)
-//{
-//	Super::Tick(DeltaTime);
-//
-//}
+void ACakeCharacterBase::BeginPlay()
+{
+	Super::BeginPlay();
+	
+}
+
+void ACakeCharacterBase::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+}
 
 void ACakeCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {

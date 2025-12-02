@@ -18,14 +18,14 @@ class CAKEWALK_API ACakeCharacterBase : public ACharacter
 
 public:
 	ACakeCharacterBase();
-	//virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
 	UAttributeSet* GetAttributeSet() const;
 
 
 protected:
-	//virtual void BeginPlay() override;
+	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Weapon")
 	TObjectPtr<USkeletalMeshComponent> Weapon;
@@ -36,8 +36,9 @@ protected:
 	FName LeftHandSocketName;
 	UPROPERTY(EditAnywhere, Category = "Combat")
 	FName RightHandSocketName;
-	UPROPERTY(EditAnywhere, Category = "Combat")
-	FName TailSocketName;
+	// TODO: Add tail socket for tail attacks if needed like demon in pj.Aura
+	//UPROPERTY(EditAnywhere, Category = "Combat")
+	//FName TailSocketName;
 
 	UPROPERTY(BlueprintReadOnly)
 	bool bDead = false;
