@@ -8,6 +8,7 @@
 #include "CakeCharacter.generated.h"
 
 
+class AWeapon;
 
 /**
  * 
@@ -20,5 +21,16 @@ class CAKEWALK_API ACakeCharacter : public ACakeCharacterBase
 public:
 	ACakeCharacter();
 
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+
+	void SetOverlappingWeapon(AWeapon* OverlapWeapon);
 	
+
+private:
+	UPROPERTY(ReplicatedUsing = OnRep_OverlappingWeapon)
+	TObjectPtr<AWeapon> OverlappingWeapon;
+
+	UFUNCTION()
+	void OnRep_OverlappingWeapon(AWeapon* LastWeapon);
 };
