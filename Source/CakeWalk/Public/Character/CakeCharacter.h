@@ -9,6 +9,7 @@
 
 
 class AWeapon;
+class UCombatComponent;
 
 /**
  * 

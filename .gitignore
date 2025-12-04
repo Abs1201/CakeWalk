@@ -25,3 +25,7 @@ Build
 *.suo
 *.xcodeproj
 *.xcworkspace
+
+**/Brushify
+**/A_Surface_Footstep
+**/Medieval_Sewer_Dungeon

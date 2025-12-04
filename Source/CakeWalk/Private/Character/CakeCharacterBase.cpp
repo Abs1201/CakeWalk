@@ -2,7 +2,6 @@
 
 
 #include "Character/CakeCharacterBase.h"
-#include "AbilitySystemComponent.h"
 
 
 ACakeCharacterBase::ACakeCharacterBase()
@@ -28,15 +27,5 @@ void ACakeCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-}
-
-UAbilitySystemComponent* ACakeCharacterBase::GetAbilitySystemComponent() const
-{
-	return AbilitySystemComponent;
-}
-
-UAttributeSet* ACakeCharacterBase::GetAttributeSet() const
-{
-	return AttributeSet;
 }
 

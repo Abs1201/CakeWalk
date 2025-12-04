@@ -4,6 +4,8 @@
 #include "Character/CakeCharacter.h"
 #include "Weapon/Weapon.h"
 #include <Net/UnrealNetwork.h>
+#include "CakeWalk/CakeWalk.h"
+
 
 ACakeCharacter::ACakeCharacter()
 {
@@ -22,6 +24,7 @@ void ACakeCharacter::SetOverlappingWeapon(AWeapon* OverlapWeapon)
 	}
 	OverlappingWeapon = OverlapWeapon;
 	if (IsLocallyControlled()) {
+		if (HasAuthority()) UE_LOG(LogCakeWalk, Display, TEXT("SetoverlappingWeapon() in Server"));
 		if (OverlappingWeapon) {
 			OverlappingWeapon->ShowPickupWidget(true);
 		}

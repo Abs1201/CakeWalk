@@ -45,7 +45,11 @@ void AWeapon::BeginPlay()
 	AreaSphere->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Overlap);
 	AreaSphere->OnComponentBeginOverlap.AddDynamic(this, &AWeapon::OnSphereBeginOverlap);
 	AreaSphere->OnComponentEndOverlap.AddDynamic(this, &AWeapon::OnSphereEndOverlap);
-	
+
+	if (PickupWidget) {
+		PickupWidget->SetVisibility(false);
+	}
+
 }
 
 
